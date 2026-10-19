@@ -1,0 +1,51 @@
+Sheet,Ref,Pin_or_signal,Net,Connects_to,Review
+Controller,U1,3V3,+3V3,Power output,Verify actual module pin number
+Controller,U1,GND,GND,Ground plane,All module grounds
+Controller,U1,EN,ESP_EN,10k pullup and RESET switch,Confirm RC network per Espressif
+Controller,U1,GPIO0,BOOT,10k pullup and BOOT switch,Strapping check
+Controller,U1,GPIO12,SPI_SCK,U2-U10 SCK,GPIO mapping tentative
+Controller,U1,GPIO11,SPI_MOSI,U2-U9 SDI and U10 DI,GPIO mapping tentative
+Controller,U1,GPIO13,SPI_MISO,U2-U9 SDO and U10 DO,GPIO mapping tentative
+Controller,U1,GPIO4,TC1_CS,U2 CS,Active low
+Controller,U1,GPIO5,TC2_CS,U3 CS,Active low
+Controller,U1,GPIO6,TC3_CS,U4 CS,Active low
+Controller,U1,GPIO7,TC4_CS,U5 CS,Active low
+Controller,U1,GPIO8,TC5_CS,U6 CS,Active low
+Controller,U1,GPIO9,TC6_CS,U7 CS,Active low
+Controller,U1,GPIO10,TC7_CS,U8 CS,Active low
+Controller,U1,GPIO14,TC8_CS,U9 CS,Active low
+Controller,U1,GPIO15,FLASH_CS,U10 CS,Active low
+Controller,U1,GPIO19,USB_DN,J1 D-,ESD and USB reference design
+Controller,U1,GPIO20,USB_DP,J1 D+,ESD and USB reference design
+Controller,U1,GPIO16,STATUS_LED,D2 resistor,Select active polarity
+Controller,U1,GPIO17,BATT_SENSE,Optional divider not populated,ADC review
+Controller,U1,GPIO18,INTERNAL_TEMP,External sensor optional,Interface TBD
+USB,J1,CC1,USB_CC1,R_CC1 5k1 to GND,USB device role
+USB,J1,CC2,USB_CC2,R_CC2 5k1 to GND,USB device role
+USB,J1,VBUS,USB_5V,U11 input,Power-path validation
+USB,J1,GND,GND,Ground,Shield strategy TBD
+Thermocouple,U2-U9,AVDD,+3V3,Local 100nF,Verify pin numbers
+Thermocouple,U2-U9,DVDD,+3V3,Local 100nF,Verify pin numbers
+Thermocouple,U2-U9,AGND,GND,Ground,Verify pin numbers
+Thermocouple,U2-U9,DGND,GND,Ground,Verify pin numbers
+Thermocouple,U2-U9,SCK,SPI_SCK,U1 GPIO12,Common SPI
+Thermocouple,U2-U9,SDI,SPI_MOSI,U1 GPIO11,Common SPI
+Thermocouple,U2-U9,SDO,SPI_MISO,U1 GPIO13,Common SPI
+Thermocouple,U2-U9,CS,TCx_CS,U1 individual GPIO,Per channel
+Thermocouple,U2-U9,T+,TCx_P,J2-J9 positive,Per channel
+Thermocouple,U2-U9,T-,TCx_N,J2-J9 negative,Per channel
+Thermocouple,U2-U9,BIAS,BIAS,Datasheet recommended circuit,Check pin type
+Thermocouple,U2-U9,DRDY,DRDY,Unconnected if polling allowed,Verify
+Thermocouple,U2-U9,FAULT,FAULT,Unconnected if polling allowed,Verify
+Storage,U10,VCC,+3V3,Local bypass,Verify datasheet
+Storage,U10,GND,GND,Ground,Verify datasheet
+Storage,U10,CLK,SPI_SCK,U1 GPIO12,Check SPI mode
+Storage,U10,DI,SPI_MOSI,U1 GPIO11,Check SPI mode
+Storage,U10,DO,SPI_MISO,U1 GPIO13,Check SPI mode
+Storage,U10,CS,FLASH_CS,U1 GPIO15,Pullup
+Storage,U10,WP#, +3V3,Pullup or IO,Verify part variant
+Storage,U10,HOLD#, +3V3,Pullup or IO,Verify part variant
+Power,U11,VIN,USB_5V,J1 VBUS,Verify input caps
+Power,U11,VOUT,+3V3,All logic,Verify peak WiFi current and thermals
+Power,U11,GND,GND,Ground,Verify package pinout
+Power,U11,EN,USB_5V,Enabled on USB,Verify package pinout
