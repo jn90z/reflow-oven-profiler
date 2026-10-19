@@ -1,0 +1,23 @@
+RefDes,Qty,Manufacturer,MPN_or_spec,Function,Footprint_or_package,Status
+U1,1,Espressif,ESP32-S3-WROOM-1U-N8,WiFi microcontroller module,Module per manufacturer drawing,Verify suffix and pin availability
+U2-U9,8,Analog Devices,MAX31856MUD+T,Type K thermocouple ADC,TSSOP-14,Verify datasheet and library footprint
+U10,1,Winbond,W25Q128JVSIQ,128 Mbit external data SPI NOR flash,SOIC-8,Verify supply voltage SPI modes and package
+U11,1,Diodes Incorporated,AP2112K-3.3TRG1,3.3V LDO for bench prototype,SOT-23-5,Validate WiFi peak load thermals and capacitors
+J1,1,Global Connector Technology,USB4085-GF-A,USB-C USB2 connector,Manufacturer drawing,Verify footprint
+J2-J9,8,TBD,Type K rated thermocouple termination,Type K wire connections,TBD,Select alloy compatible connector and CJC geometry
+SW1-SW2,2,TBD,Momentary normally open,RESET and BOOT,SMT tactile,Select
+D1,1,TBD,USB data ESD protection,USB ESD,SMT,Select
+D2,1,TBD,0603 LED,Status,0603,Select
+R_CS1-R_CS8,8,TBD,10k 1%,Thermocouple CS pullups,0603,Proposed
+R_EN-R_BOOT,2,TBD,10k 1%,EN and boot pullups,0603,Confirm Espressif reference design
+R_CC1-R_CC2,2,TBD,5.1k 1%,USB-C Rd CC1 and CC2,0603,Proposed USB device
+R_LED,1,TBD,1k,Status LED,0603,Adjust per LED
+C_ADC_D,8,TBD,100nF,ADC DVDD decoupling,0603,Near each MAX31856
+C_ADC_A,8,TBD,100nF,ADC AVDD decoupling,0603,Near each MAX31856
+C_TC_DIFF,8,TBD,10nF,Thermocouple differential filtering,0603,Verify MAX31856 recommendation
+C_TC_CM,16,TBD,100nF,Thermocouple common mode filtering,0603,Verify MAX31856 recommendation
+C_BULK,2,TBD,10uF,Supply bulk,0805,Check DC bias
+TP_MISC,6,TBD,Test points,Debug power SPI and ground,TBD,Select
+ANT1,1,TBD,2.4GHz antenna suitable for RF path,Wireless,TBD,RF thermal feasibility unverified
+PWR_BATT,1,TBD,Qualified battery and power switching solution,Independent oven operation,TBD,Not selected pending thermal validation
+CJC_TEST,1,TBD,Precision temperature sensor or test point,Cold junction validation,TBD,Optional validation component
