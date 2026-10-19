@@ -3,7 +3,7 @@ U1,1,Espressif,ESP32-S3-WROOM-1U-N8,WiFi microcontroller module,Module per manuf
 U2-U9,8,Analog Devices,MAX31856MUD+T,Type K thermocouple ADC,TSSOP-14,Verify datasheet and library footprint
 U10,1,Winbond,W25Q128JVSIQ,128 Mbit external data SPI NOR flash,SOIC-8,Verify supply voltage SPI modes and package
 U11,1,Diodes Incorporated,AP2112K-3.3TRG1,3.3V LDO for bench prototype,SOT-23-5,Validate WiFi peak load thermals and capacitors
-J1,1,Global Connector Technology,USB4085-GF-A,USB-C USB2 connector,Manufacturer drawing,Verify footprint
+J1,1,Adam Tech,USB-C31-S-RA-EH2.0B-BK-T/R,USB Type-C receptacle right-angle edge-hanging USB 3.1 rated (used as USB 2.0),Manufacturer-specific 24-contact SMT/TH edge-hanging footprint,VERIFY exact manufacturer mechanical drawing PCB edge cutout and mounting before layout
 J2-J9,8,TBD,Type K rated thermocouple termination,Type K wire connections,TBD,Select alloy compatible connector and CJC geometry
 SW1-SW2,2,TBD,Momentary normally open,RESET and BOOT,SMT tactile,Select
 D1,1,TBD,USB data ESD protection,USB ESD,SMT,Select
